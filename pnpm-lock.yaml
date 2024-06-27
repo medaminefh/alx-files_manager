@@ -27,8 +27,8 @@ importers:
         specifier: ^3.5.9
         version: 3.7.4
       redis:
-        specifier: ^2.8.0
-        version: 2.8.0
+        specifier: ^3.1.1
+        version: 3.1.1
       sha1:
         specifier: ^1.1.1
         version: 1.1.1
@@ -1205,9 +1205,6 @@ packages:
     resolution: {integrity: sha512-yS+Q5i3hBf7GBkd4KG8a7eBNNWNGLTaEwwYWUijIYM7zrlYDM0BFXHjjPWlWZ1Rg7UaddZeIDmi9jF3HmqiQ2w==}
     engines: {node: '>=6.0.0'}
 
-  double-ended-queue@2.1.0-0:
-    resolution: {integrity: sha512-+BNfZ+deCo8hMNpDqDnvT+c0XpJ5cUa6mqYq89bho2Ifze4URTqRkcwR399hWoTrTkbZ/XJYDgP6rc7pRgffEQ==}
-
   ecc-jsbn@0.1.2:
     resolution: {integrity: sha512-eh9O+hwRHNbG4BLTjEl3nw044CkGm5X6LoaCf7LPp7UU8Qrt47JYNi6nPX8xjW97TKGKm1ouctg0QSpZe9qrnw==}
 
@@ -2284,17 +2281,13 @@ packages:
     resolution: {integrity: sha512-1qny3OExCf0UvUV/5wpYKf2YwPcOqXzkwKKSmKHiE6ZMQs5heeE/c8eXK+PNllPvmjgAbfnsbpkGZWy8cBpn9w==}
     engines: {node: '>=4'}
 
-  redis-parser@2.6.0:
-    resolution: {integrity: sha512-9Hdw19gwXFBJdN8ENUoNVJFRyMDFrE/ZBClPicKYDPwNPJ4ST1TedAHYNSiGKElwh2vrmRGMoJYbVdJd+WQXIw==}
-    engines: {node: '>=0.10.0'}
-
   redis-parser@3.0.0:
     resolution: {integrity: sha512-DJnGAeenTdpMEH6uAJRK/uiyEIH9WVsUmoLwzudwGJUwZPp80PDBWPHXSAGNPwNvIXAbe7MSUB1zQFugFml66A==}
     engines: {node: '>=4'}
 
-  redis@2.8.0:
-    resolution: {integrity: sha512-M1OkonEQwtRmZv4tEWF2VgpG0JWJ8Fv1PhlgT5+B+uNq2cA3Rt1Yt/ryoR+vQNOQcIEgdCdfH0jr3bDpihAw1A==}
-    engines: {node: '>=0.10.0'}
+  redis@3.1.1:
+    resolution: {integrity: sha512-QhkKhOuzhogR1NDJfBD34TQJz2ZJwDhhIC6ZmvpftlmfYShHHQXjjNspAJ+Z2HH5NwSBVYBVganbiZ8bgFMHjg==}
+    engines: {node: '>=10'}
 
   regenerate-unicode-properties@10.1.1:
     resolution: {integrity: sha512-X007RyZLsCJVVrjgEFVpLUTZwyOZk3oiL75ZcuYjlIWd6rNJtOjkBwQc5AsRrpbKVkxN6sklw/k/9m2jJYOf8Q==}
@@ -4174,8 +4167,6 @@ snapshots:
     dependencies:
       esutils: 2.0.3
 
-  double-ended-queue@2.1.0-0: {}
-
   ecc-jsbn@0.1.2:
     dependencies:
       jsbn: 0.1.1
@@ -5346,17 +5337,16 @@ snapshots:
 
   redis-errors@1.2.0: {}
 
-  redis-parser@2.6.0: {}
-
   redis-parser@3.0.0:
     dependencies:
       redis-errors: 1.2.0
 
-  redis@2.8.0:
+  redis@3.1.1:
     dependencies:
-      double-ended-queue: 2.1.0-0
+      denque: 1.5.1
       redis-commands: 1.7.0
-      redis-parser: 2.6.0
+      redis-errors: 1.2.0
+      redis-parser: 3.0.0
 
   regenerate-unicode-properties@10.1.1:
     dependencies:
