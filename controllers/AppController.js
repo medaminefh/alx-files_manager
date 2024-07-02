@@ -10,8 +10,8 @@ export default class AppController {
   }
 
   static async getStats(req, res) {
-    const users = await RedisClient.nbUsers();
-    const files = await RedisClient.nbFiles();
+    const users = await dbClient.nbUsers();
+    const files = await dbClient.nbFiles();
     res.json({ users, files });
   }
 }
